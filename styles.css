@@ -1,0 +1,58 @@
+.flex-container {
+  display: flex;
+}
+
+.flex-container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.left {
+  display: flex;
+  padding-right: 5px;
+  flex-direction: column;
+  flex: 1;
+}
+
+.right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+button {
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px 1px;
+  cursor: pointer;
+  align-items: center;
+}
+
+body {
+}
+/* a {
+  color: #0033cc;
+} */
+
+/* Dark Mode styles */
+body.dark-theme {
+  color: #bdbdbd;
+  background: #212121;
+}
+
+body.dark-theme *[class^='ql-']{
+  color: #bdbdbd;
+}
+
+body.dark-theme *[class^='ql-stroke']{
+  stroke: #bdbdbd;
+}
+/* body.dark-theme a {
+  color: #809fff;
+} */
