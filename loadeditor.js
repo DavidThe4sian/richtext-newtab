@@ -33,11 +33,18 @@ quill2.on('text-change', function(delta, oldDelta, source) {
 
 btn = document.querySelector('.toggle');
 
-btn.addEventListener('click', function() {
-  document.body.classList.toggle('dark-theme');
+chrome.storage.sync.get(['dark'], function(result) {
+  if(result.dark) {
+    document.body.classList.toggle('dark-theme', true);
+    dark = result.dark;
+  } else {
+    document.body.classList.toggle('dark-theme', false);
+    dark = result.dark;
+  }
 })
 
-function myFunction() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-}
+btn.addEventListener('click', function() {
+  document.body.classList.toggle('dark-theme');
+  chrome.storage.sync.set({"dark": !dark}, function() {
+  });
+})
