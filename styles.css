@@ -8,6 +8,9 @@
   align-items: center;
 }
 
+.quote-container {
+  text-align: center;
+}
 
 .left {
   display: flex;
@@ -35,10 +38,8 @@ button {
 }
 
 body {
+  /* display:block !important; */
 }
-/* a {
-  color: #0033cc;
-} */
 
 /* Dark Mode styles */
 body.dark-theme {
