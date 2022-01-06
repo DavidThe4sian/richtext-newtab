@@ -37,3 +37,28 @@ btn.addEventListener('click', function() {
   chrome.storage.local.set({"dark": !dark}, function() {
   });
 })
+
+quill.keyboard.addBinding({
+  key: '8',
+  ctrlKey: true,
+  shiftKey: true,
+}, function(range, context) {
+  if (context.format.list) {
+    this.quill.formatLine(range, 'list', false);
+  } else {
+    this.quill.formatLine(range, 'list', 'bullet');
+  }
+});
+
+
+quill2.keyboard.addBinding({
+  key: '8',
+  ctrlKey: true,
+  shiftKey: true,
+}, function(range, context) {
+  if (context.format.list) {
+    this.quill.formatLine(range, 'list', false);
+  } else {
+    this.quill.formatLine(range, 'list', 'bullet');
+  }
+});
